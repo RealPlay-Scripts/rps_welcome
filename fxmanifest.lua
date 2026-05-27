@@ -1,8 +1,8 @@
 fx_version 'cerulean'
 game 'gta5'
 
-author 'rps scripts'
-description 'Server Welcome Screen & API Integration'
+author 'Realplay Scripts'
+description 'server Welcome Screen & API Integration'
 version '1.0.0'
 
 server_scripts {
