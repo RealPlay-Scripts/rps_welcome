@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CFRP Welcome</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Exo+2:wght@300;400;600;700;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <div id="overlay" class="hidden">
+        <div id="bg-particles"></div>
+
+        <div id="card">
+            <div class="card-border-top"></div>
+
+            <!-- Header -->
+            <div id="card-header">
+                <div id="logo-wrap">
+                    <div id="logo-hex"><span>CF</span></div>
+                    <div id="logo-rp">RP</div>
+                </div>
+                <div id="header-text">
+                    <p id="server-tag">CALIFORNIA FIRST ROLEPLAY</p>
+                    <h1 id="welcome-title">WELCOME<span class="accent">,</span></h1>
+                    <h2 id="player-name">Officer</h2>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="divider">
+                <div class="line"></div>
+                <div class="diamond"></div>
+                <div class="line"></div>
+            </div>
+
+            <!-- Body -->
+            <div id="card-body">
+                <p id="main-msg">
+                    Want to be a part of the <strong class="accent">CFRP Family</strong>?
+                    We're a passionate community built around immersive, serious roleplay.
+                </p>
+
+                <div id="feature-row">
+                    <div class="feature"><div class="feature-icon">🎮</div><div class="feature-label">Serious RP</div></div>
+                    <div class="feature"><div class="feature-icon">🚔</div><div class="feature-label">Active LEO</div></div>
+                    <div class="feature"><div class="feature-icon">🏙️</div><div class="feature-label">Custom City</div></div>
+                    <div class="feature"><div class="feature-icon">🤝</div><div class="feature-label">Community</div></div>
+                </div>
+
+                <!-- Whitelist warning -->
+                <div id="whitelist-banner">
+                    <div id="whitelist-icon">⚠️</div>
+                    <div id="whitelist-text">
+                        <span id="whitelist-title">WHITELIST REQUIRED</span>
+                        <span id="whitelist-sub">You must register on our website and submit a whitelist application before you can play.</span>
+                    </div>
+                </div>
+
+                <!-- Website signup button -->
+                <button id="btn-website" onclick="openWebsite()">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/>
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                    </svg>
+                    <div>
+                        <span id="btn-website-label">SIGN UP &amp; APPLY</span>
+                        <span id="btn-website-sub">Register on our website</span>
+                    </div>
+                </button>
+
+                <!-- Discord display — click to copy -->
+                <div id="discord-box" onclick="copyDiscord()" title="Click to copy">
+                    <svg id="discord-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057c.002.022.015.043.03.054a19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/>
+                    </svg>
+                    <div id="discord-text-wrap">
+                        <span id="discord-label">DISCORD</span>
+                        <span id="discord-url">discord.gg/P3pBmHtgYP</span>
+                    </div>
+                    <div id="copy-btn">
+                        <svg id="icon-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                        </svg>
+                        <svg id="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="display:none">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        <span id="copy-label">COPY</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div id="card-footer">
+                <p id="footer-hint">Press <kbd>ESC</kbd> to dismiss</p>
+                <button id="btn-close" onclick="closePanel()">
+                    <span>CONTINUE</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+            </div>
+
+            <div id="progress-bar"><div id="progress-fill"></div></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
