@@ -4,18 +4,21 @@
 
 Config = {}
 
--- Your API base URL (no trailing slash)
-Config.ApiBaseUrl = "https://web.goldenshoresrp.com/api"
+-- Your API base URL (no trailing slash). Set as server convars in
+-- server.cfg, never commit real values here:
+--   set rps_welcome_api_url "https://yoursite.example/api"
+--   set rps_welcome_api_key "your-api-key"   (read + write scope)
+Config.ApiBaseUrl = GetConvar('rps_welcome_api_url', 'https://yoursite.example/api')
 
 -- Your API Key (X-API-Key)
-Config.ApiKey = "cfrp_lf2su5uQaGj0SoIGQs7m-Sg7LYahw-4ufoLCf5RKD1fhIQNjl3sUWvm85xy1FkNo"
+Config.ApiKey = GetConvar('rps_welcome_api_key', '')
 
 
 -- Discord invite link shown in the popup
 Config.DiscordLink = "https://discord.gg/P3pBmHtgYP"
 
 -- Website signup/whitelist application URL
-Config.WebsiteUrl = "https://web.goldenshoresrp.com/auth/register"
+Config.WebsiteUrl = GetConvar('rps_welcome_website_url', 'https://yoursite.example/auth/register')
 
 -- How long (ms) before the welcome popup auto-closes (0 = never auto-close)
 Config.AutoCloseDelay = 0  -- disabled so users see the signup prompt
@@ -27,4 +30,4 @@ Config.HeartbeatInterval = 60000  -- every 60 seconds
 Config.ServerName = "GSRP"
 
 -- Enable debug prints in server console
-Config.Debug = true
+Config.Debug = false
